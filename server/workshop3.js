@@ -4,18 +4,33 @@ const { stdin: input, stdout: output } = require('process');
 console.log('Starting server...');
 
 const rl = readline.createInterface({ input, output });
-rl.question('Input number: ', (number) => {
-    console.log(number_of_max(number));
+
+rl.question('Input numbers (คั่นด้วยช่องว่าง): ', (line) => {
+    const cleanInput = line.trim();
+
+    // แยกเป็นอาร์เรย์และแปลงเป็นตัวเลข
+    const arr = cleanInput.split(/\s+/).map(Number);
+
+    // ตรวจว่ามีค่าที่ไม่ใช่ตัวเลขหรือไม่
+    if (arr.some(isNaN)) {
+        console.log('กรุณาใส่ตัวเลขเท่านั้น (คั่นด้วยช่องว่าง)');
+        rl.close();
+        return;
+    }
+
+    const result = number_of_max(arr);
+
+    console.log(`เลขที่ซ้ำกันมากที่สุดคือ '${result.number}' (${result.count} ครั้ง)`);
+    rl.close();
 });
 
-function number_of_max(array) {
+function number_of_max(arr) {
     const count = {};
     let maxCount = 0;
     let mostFrequent = null;
 
-    for (let num of array) {
+    for (let num of arr) {
         count[num] = (count[num] || 0) + 1;
-
         if (count[num] > maxCount) {
             maxCount = count[num];
             mostFrequent = num;
