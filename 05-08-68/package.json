@@ -1,0 +1,26 @@
+{
+  "name": "05-08-68",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "wh1": "npx tsc workshop1.ts && node workshop1.js",
+    "wh2": "npx tsc workshop2.ts && node workshop2.js",
+    "wh3": "npx tsc workshop3.ts && node workshop3.js",
+    "wh4": "npx tsc workshop4.ts && node workshop4.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.2.0",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}

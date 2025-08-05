@@ -7,11 +7,8 @@ const rl = readline.createInterface({ input, output });
 
 rl.question('Input numbers (คั่นด้วยช่องว่าง): ', (line) => {
     const cleanInput = line.trim();
-
-    // แยกเป็นอาร์เรย์และแปลงเป็นตัวเลข
     const arr = cleanInput.split(/\s+/).map(Number);
 
-    // ตรวจว่ามีค่าที่ไม่ใช่ตัวเลขหรือไม่
     if (arr.some(isNaN)) {
         console.log('กรุณาใส่ตัวเลขเท่านั้น (คั่นด้วยช่องว่าง)');
         rl.close();
