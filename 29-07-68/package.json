@@ -5,6 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
+    "whn1": "nodemon workshopNode1.js",
+    "whn2": "nodemon workshopNode2.js",
     "wh1": "nodemon workshop1.js",
     "wh2": "nodemon workshop2.js",
     "wh3": "nodemon workshop3.js",
