@@ -1,0 +1,7 @@
+[
+    { "usernameOrEmail": "admin2025", "password": "admin2025" },
+    { "usernameOrEmail": "admin2025@gmail.com", "password": "admin2025" },
+    { "usernameOrEmail": "admin2025", "password": "admin2025worng" },
+    { "usernameOrEmail": "admin2025@gmail.com", "password": "admin2025worng" }
+  ]
+  
